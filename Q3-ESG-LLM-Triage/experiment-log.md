@@ -257,11 +257,11 @@ A simple rule-based baseline was defined to provide a transparent comparison wit
 
 Category rules R1–R3 were applied first. R4 was then used as an additional confidentiality condition where relevant. Otherwise, sensitivity was set to LOW for these test cases. All three messages required follow-up.
 
-The baseline rules were manually applied to the recorded messages. An executable Python implementation is planned as additional reproducibility evidence; no Python execution is claimed in this log.
+The rule-based baseline was implemented and executed in Python using Google Colab. The code applied the predefined classification rules to the three test messages and compared its outputs against the revised GPT-4.1 mini classifications. The executed notebook and exported comparison CSV are included in this repository.
 
 ### Comparison results
 
-| Test | Field | GPT-4.1 mini | Manual rule-based baseline | Agreement |
+| Test | Field | GPT-4.1 mini |Python rule-based baseline| Agreement |
 |---|---|---|---|---|
 | T01 | Category | ENERGY | ENERGY | Yes |
 | T01 | Urgency | MEDIUM | MEDIUM | Yes |
@@ -282,7 +282,7 @@ Both approaches also indicated that follow-up was required for all three message
 
 ### Interpretation
 
-The revised LLM agreed with the manually applied baseline on all four compared fields across the three examples.
+The revised LLM and executed Python rule-based baseline agreed on all four compared fields across the three test messages, producing 12/12 agreements (100%). This measures agreement between the two methods, not classification accuracy.
 
 However, agreement is not equivalent to accuracy. The baseline rules were defined around a small set of clearly worded scenarios, and no independent human-labelled test dataset was used.
 
@@ -335,7 +335,10 @@ Microsoft Entra ID, managed identities, Azure Key Vault, encryption and role-bas
 - Initial prompt and actual T01 JSON output.
 - Revised prompt and actual T01–T03 JSON outputs.
 - Four Microsoft Foundry screenshots.
-- Manually evaluated rule-based baseline.
+- Executed Python rule-based baseline in Google Colab.
+- Python notebook: `Q3_ESG_Rule_Based_Baseline.ipynb`
+- Exported results: `Q3_baseline_comparison.csv`
+- Execution screenshot: `screenshots/Q3_Python_Baseline_Result.png`
 - Comparison of LLM and baseline classifications.
 - Critical evaluation and proposed Azure architecture.
 
@@ -343,8 +346,8 @@ Microsoft Entra ID, managed identities, Azure Key Vault, encryption and role-bas
 
 - Only three messages were tested using the revised prompt.
 - Repeated model runs were not conducted.
-- The rule-based baseline was manually evaluated.
-- The baseline was not tested against an independent labelled dataset.
+- The Python baseline was executed, but its rules were tailored to the three selected test messages.
+- Neither method was evaluated against an independent human-labelled dataset.
 - No live employee information was used.
 - No automated ticketing or production escalation was deployed.
 
