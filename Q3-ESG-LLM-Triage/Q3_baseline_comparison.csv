@@ -1,0 +1,13 @@
+Test,Field,GPT-4.1 mini,Rule-based baseline,Match
+T01,category,ENERGY,ENERGY,Yes
+T01,urgency,MEDIUM,MEDIUM,Yes
+T01,team,Facilities/Energy,Facilities/Energy,Yes
+T01,sensitivity,LOW,LOW,Yes
+T02,category,ACCESSIBILITY,ACCESSIBILITY,Yes
+T02,urgency,HIGH,HIGH,Yes
+T02,team,Facilities/Accessibility Officer,Facilities/Accessibility Officer,Yes
+T02,sensitivity,LOW,LOW,Yes
+T03,category,PROCUREMENT_GOVERNANCE,PROCUREMENT_GOVERNANCE,Yes
+T03,urgency,HIGH,HIGH,Yes
+T03,team,Procurement/Compliance,Procurement/Compliance,Yes
+T03,sensitivity,HIGH,HIGH,Yes
